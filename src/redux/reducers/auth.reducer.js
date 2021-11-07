@@ -1,8 +1,8 @@
 import { LOAD_PROFILE, LOGIN_FAIL, LOGIN_REQUEST, LOGIN_SUCCESS, LOG_OUT } from "../actionType";
 
 const initialState = {
-    user: null,
-    accessToken: null,
+    user: sessionStorage.getItem('kriat-user') ? JSON.parse(sessionStorage.getItem('kriat-user')) : null,
+    accessToken: sessionStorage.getItem('kriat-token')? sessionStorage.getItem('kriat-token'): null,
     loading: false
 }
 
