@@ -7,7 +7,7 @@ import Homescreen from './screens/homeScreen/Homescreen';
 import { useSelector } from 'react-redux'
 
 import './_app.scss'
-import LoginScreen from './screens/homeScreen/loginScreen/Loginscreen';
+import LoginScreen from './screens/loginScreen/Loginscreen';
 import {
   Switch,
   Route,

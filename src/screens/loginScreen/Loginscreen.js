@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
 import { useHistory } from 'react-router'
-import { login } from '../../../redux/actions/auth.action'
+import { login } from '../../redux/actions/auth.action'
 
 import './_loginScreen.scss'
 
