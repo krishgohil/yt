@@ -52,8 +52,9 @@ function App() {
         <Layout>
           <Homescreen />
         </Layout>
-      </Route>
+      </Route>\
 
+      
       <Route path='/auth'>
         <LoginScreen />
       </Route>

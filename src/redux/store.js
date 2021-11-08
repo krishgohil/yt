@@ -1,21 +1,52 @@
-import { createStore, applyMiddleware,combineReducers } from 'redux';
+// import { createStore, applyMiddleware,combineReducers } from 'redux';
 
-import { composeWithDevTools } from 'redux-devtools-extension';
+// import { composeWithDevTools } from 'redux-devtools-extension';
 
 
-import {authReducer} from './reducers/auth.reducer'
-import { homeVideoReducer } from './reducers/video.reducer';
+// import {authReducer} from './reducers/auth.reducer'
+// import { homeVideoReducer } from './reducers/video.reducer';
+// import thunk from 'redux-thunk'
+
+
+// const rootReducer = combineReducers({
+//     auth: authReducer,
+//     homeVideos : homeVideoReducer,
+// })
+// const store = createStore(
+//     rootReducer,
+//     {},
+//     composeWithDevTools(applyMiddleware(thunk))
+// )
+
+// export default store
+
+import { createStore, applyMiddleware, combineReducers } from 'redux'
+
+import { composeWithDevTools } from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 
+import { authReducer } from './reducers/auth.reducer'
+import {
+   homeVideosReducer,
+   relatedVideoReducer,
+} from './reducers/videos.reducer'
+import { selectedVideoReducer } from './reducers/videos.reducer'
+import { channelDetailsReducer } from './reducers/channel.reducer'
+import { commentListReducer } from './reducers/comments.reducer'
 
 const rootReducer = combineReducers({
-    auth: authReducer,
-    homeVideos : homeVideoReducer,
+   auth: authReducer,
+   homeVideos: homeVideosReducer,
+   selectedVideo: selectedVideoReducer,
+   channelDetails: channelDetailsReducer,
+   commentList: commentListReducer,
+   relatedVideos: relatedVideoReducer,
 })
+
 const store = createStore(
-    rootReducer,
-    {},
-    composeWithDevTools(applyMiddleware(thunk))
+   rootReducer,
+   {},
+   composeWithDevTools(applyMiddleware(thunk))
 )
 
 export default store
