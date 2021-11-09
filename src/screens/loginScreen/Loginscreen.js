@@ -1,17 +1,20 @@
-import React from 'react'
-import { useEffect } from 'react'
-
+import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useHistory } from 'react-router'
+import { useHistory } from 'react-router-dom'
 import { login } from '../../redux/actions/auth.action'
 
 import './_loginScreen.scss'
 
 const LoginScreen = () => {
+   const dispatch = useDispatch()
+
+   const accessToken = useSelector(state => state.auth.accessToken)
+
+   const handleLogin = () => {
+      dispatch(login())
+   }
+
    const history = useHistory()
-   const accessToken = useSelector(state=>state.auth.accessToken)
-
-
 
    useEffect(() => {
       if (accessToken) {
@@ -19,11 +22,6 @@ const LoginScreen = () => {
       }
    }, [accessToken, history])
 
-   const dispatch = useDispatch()
-   const handleLogin = () =>{
-      dispatch(login())
-
-   }
    return (
       <div className='login'>
          <div className='login__container'>

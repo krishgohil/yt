@@ -1,50 +1,4 @@
-@import '../../_base.scss';
-.videoMetaData {
-   &__top {
-      span {
-         cursor: pointer;
-      }
-   }
-
-   &__channel {
-      border-top: 0.2px solid $border-color;
-      border-bottom: 0.2px solid $border-color;
-      img {
-         width: 50px;
-         height: 50px;
-      }
-
-      button {
-         background-color: red;
-         color: #fff;
-         border-radius: 0;
-         text-transform: uppercase;
-         letter-spacing: 0.5px;
-         &.btn-gray {
-            background-color: gray;
-         }
-         &:hover {
-            color: #fff;
-         }
-         &:focus {
-            border: none;
-            outline: none;
-         }
-      }
-   }
-   &__description {
-      font-size: 0.9rem;
-      white-space: pre-line;
-      border-bottom: 0.2px solid $border-color;
-      .showMoreText {
-         text-decoration: none;
-         display: block;
-         margin: 1rem 0;
-         color: #fff;
-         font-weight: 500;
-      }
-   }
-}@import '../../base.scss';
+@import '../../base.scss';
 
 .videoHorizontal {
    border-bottom: 0.3px solid $border-color;
@@ -54,10 +8,15 @@
    &__left {
       position: relative;
       text-align: center;
+      padding-left: 0 !important;
    }
 
    &__thumbnail {
       width: 100%;
+      &-channel {
+         width: 50%;
+         border-radius: 50%;
+      }
 
       &-wrapper {
          width: 100%;
@@ -81,12 +40,16 @@
    }
 
    &__title {
-      font-size: 1rem;
+      font-size: 0.95rem;
 
       // color: #fff;
       letter-spacing: 0.3px;
 
       @include line-clamp(2);
+   }
+   &__desc {
+      @include line-clamp(2);
+      font-size: 0.9rem;
    }
 
    &__channel {
@@ -119,17 +82,17 @@
             display: none;
          }
          p {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
          }
       }
 
-      //   &__desc {
-      //      display: none;
-      //   }
+      &__desc {
+         display: none;
+      }
 
       &__title {
-         font-size: 1rem;
-         @include line-clamp(2);
+         font-size: 0.9rem;
+         @include line-clamp(1);
       }
    }
 }
