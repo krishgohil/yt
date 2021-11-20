@@ -22,7 +22,7 @@ const Sidebar = ({ sidebar, handleToggleSidebar }) => {
    return (
       <nav
          className={sidebar ? 'sidebar open' : 'sidebar'}
-         onClick={() => handleToggleSidebar(false)}>
+         onClick={() =>  handleToggleSidebar(false)}>
          <Link to='/'>
             <li>
                <MdHome size={23} />

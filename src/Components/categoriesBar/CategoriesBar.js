@@ -8,6 +8,7 @@ import './_categoriesBar.scss'
 
 const keywords = [
    'All',
+   'Entertainment',
    'React js',
    'Angular js',
    'React Native',
@@ -21,9 +22,6 @@ const keywords = [
    'Cricket',
    'Football',
    'Real Madrid',
-   'Gatsby',
-   'Poor Coder',
-   'Shwetabh',
 ]
 
 const CategoriesBar = () => {
